@@ -73,13 +73,13 @@ header {
 
 .hero-content p {
     font-family: "Mukta Mahee", arial, sans-serif;
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 25px;
+    margin-bottom: 60px;
     color: #e8ebec;
 }
 
 .hero-content span {
-    color: #4e5355;
+    color: #95999a;
     font-family: 'Mukta Mahee', Aeria, sans-serif;
 }
 
@@ -99,4 +99,33 @@ header {
 .hero-btn:hover {
     background: white;
     color: black;
+}
+
+/* responsivenes for header and hero section  */
+
+@media (max-width : 480px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 20px;
+    }
+
+    .logo {
+        font-size: 30px;
+        font-weight: 800;
+    }
+
+    .hamburger-icon {
+        font-size: 30px;
+        font-weight: 100;
+    }
+
+    .hero {
+        margin-top: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+        font-weight: 700;
+    }
 }
