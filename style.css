@@ -94,6 +94,7 @@ header {
     letter-spacing: 6px;
     transition: background 0.3s ease;
     border-radius: 4px;
+    text-transform: uppercase;
 }
 
 .hero-btn:hover {
@@ -128,4 +129,66 @@ header {
         font-size: 40px;
         font-weight: 700;
     }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-btn {
+        display: block;
+        padding: 16px 30px;
+        text-transform: uppercase;
+    }
+}
+
+/* hero 1 section styling */
+.intro-section {
+    padding: 80px 40px;
+    background-color: #fff;
+    font-family: 'Mukta Mahee', sans-serif;
+}
+
+.intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.intro-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 6px;
+}
+
+.intro-content {
+    max-width: 500px;
+}
+
+.intro-content h2 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.intro-content p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.watch-video {
+    text-decoration: none;
+    color: #00c6a9;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.watch-video i {
+    font-size: 24px;
 }
