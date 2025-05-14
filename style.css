@@ -102,6 +102,158 @@ header {
     color: black;
 }
 
+
+/* hero 1 section styling */
+.intro-section {
+    padding: 80px 40px;
+    background-color: #fff;
+    font-family: 'Mukta Mahee', sans-serif;
+}
+
+.intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.intro-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 6px;
+}
+
+.intro-content {
+    max-width: 500px;
+}
+
+.intro-content h2 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 32px;
+    margin: 0 0 20px;
+    color: #000;
+}
+
+.intro-content p {
+    font-size: 16px;
+    color: #a09b9b;
+    margin-bottom: 20px;
+    line-height: 1.9;
+}
+
+.watch-video {
+    text-decoration: none;
+    color: #3F9A94;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.watch-video i {
+    font-size: 24px;
+}
+
+/* experience section */
+/* Experience Section */
+.experience-section {
+    padding: 80px 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+    font-family: 'Mukta Mahee', sans-serif;
+}
+
+.experience-header h2 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 32px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.experience-header p {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Experience Grid (adjusting to display 3 boxes per row) */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 boxes per row by default */
+    gap: 40px;
+    justify-content: center;
+    /* Center the grid items */
+}
+
+.experience-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.experience-card img {
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.experience-card h3 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.experience-card p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .experience-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 boxes per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-grid {
+        grid-template-columns: 1fr;
+        /* 1 box per row */
+    }
+
+    /* Adjust the card size and padding for mobile */
+    .experience-card {
+        padding: 15px;
+    }
+
+    .experience-card h3 {
+        font-size: 24px;
+    }
+
+    .experience-card p {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* responsivenes for header and hero section  */
 
 @media (max-width : 480px) {
@@ -139,56 +291,44 @@ header {
         padding: 16px 30px;
         text-transform: uppercase;
     }
-}
 
-/* hero 1 section styling */
-.intro-section {
-    padding: 80px 40px;
-    background-color: #fff;
-    font-family: 'Mukta Mahee', sans-serif;
-}
+    /* intro section responsivenes for mobile screens  */
+    .intro-section {
+        padding: 40px 20px;
+    }
 
-.intro-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-}
+    .intro-container {
+        flex-direction: column;
+        gap: 30px;
+        text-align: left;
+        align-items: flex-start;
+    }
 
-.intro-image img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 6px;
-}
+    .intro-image img {
+        max-width: 100%;
+        height: auto;
+    }
 
-.intro-content {
-    max-width: 500px;
-}
+    .intro-content {
+        max-width: 100%;
+    }
 
-.intro-content h2 {
-    font-family: 'Abril Fatface', serif;
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: #000;
-}
+    .intro-content h2 {
+        font-size: 24px;
+    }
 
-.intro-content p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
+    .intro-content p {
+        font-size: 14px;
+    }
 
-.watch-video {
-    text-decoration: none;
-    color: #00c6a9;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+    .watch-video {
+        font-size: 14px;
+        justify-content: flex-start;
 
-.watch-video i {
-    font-size: 24px;
+    }
+
+    .watch-video i {
+        font-size: 20px;
+    }
+
 }
