@@ -768,7 +768,7 @@ header {
     }
 
     .card-group {
-        width: 350px;
+        width: 330px;
         grid-template-columns: 1fr;
         /* Stack cards vertically */
         gap: 20px;
