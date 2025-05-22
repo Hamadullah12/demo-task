@@ -8,6 +8,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
+/* Header stays same */
 header {
     width: 100%;
     padding: 20px 40px;
@@ -17,8 +18,8 @@ header {
     align-items: center;
     position: absolute;
     top: 30px;
-    left: -10px;
-    z-index: 10;
+    left: 0;
+    z-index: 101;
 }
 
 .logo {
@@ -32,6 +33,93 @@ header {
     font-size: 30px;
     color: white;
     cursor: pointer;
+}
+
+.hamburger-icon .fa-times {
+    opacity: 0;
+    pointer-events: none;
+    color: black;
+}
+
+.hamburger-icon.active .fa-bars {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hamburger-icon.active .fa-times {
+    opacity: 1;
+    font-size: 50px;
+    pointer-events: auto;
+    position: relative;
+    z-index: 110;
+}
+
+/* Full page overlay menu */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 100;
+}
+
+/* Show the menu by sliding in from right */
+.navbar.active {
+    transform: translateX(0);
+}
+
+/* Centered vertical nav list */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+}
+
+.nav-list li a {
+    font-family: "Abril Fatface", Times, serif;
+    color: black;
+    font-size: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-list li a:hover {
+    color: #ff6b6b;
+}
+
+/* Hamburger and close icon styles */
+.hamburger-icon i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Cross icon styles */
+.hamburger-icon.cross i::before {
+    content: "\f00d";
+    /* FontAwesome times icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+/* Hide original bars icon when active */
+.hamburger-icon.cross i {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00d";
+    /* times (cross) */
+    /* or just change the icon in JS */
+    color: black;
 }
 
 /* hero section */
@@ -272,22 +360,20 @@ header {
 
 /* card styling */
 .card-group {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+
 }
 
 .card {
     background-color: #fff;
     border: 1px solid #ddd;
-    width: 300px;
+    height: auto;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
+
 }
 
 .card img {
@@ -301,19 +387,266 @@ header {
 }
 
 .card-title {
-    font-size: 18px;
+    font-family: 'Abril Fatface', serif;
+    font-size: 30px;
     margin: 0 0 10px;
+    padding-top: 10px;
 }
 
 .card-text {
-    font-size: 14px;
+    font-family: 'Mukta Mahee', sans-serif;
+    font-size: 24px;
     margin: 0 0 10px;
+    color: #6d6d6d;
+    padding-top: 20px;
+    line-height: 30px;
 }
 
 .small-text {
     font-size: 12px;
     color: #777;
 }
+
+/* customers section */
+.customers {
+    padding: 40px 80px;
+    width: 100%;
+    background-color: #FAFAFA;
+}
+
+.main-customers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.customer-title {
+
+    font-size: 72px;
+    line-height: 60px;
+    font-family: 'Abril Fatface', serif;
+}
+
+.customers-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding-top: 40px;
+}
+
+.customer-card {
+    height: auto;
+    overflow: hidden;
+    width: 350px;
+}
+
+.customer-card img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.customer-card p {
+    padding-top: 20px;
+    font-family: 'Mukta Mahee';
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1.7;
+}
+
+.customer-name {
+    font-size: 18px;
+    color: #a09b9b;
+}
+
+/* destination section styling */
+
+.top-destination {
+    padding: 60px 80px;
+    width: 100%;
+}
+
+.destination-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.top-title {
+    font-size: 32px;
+    font-family: 'Abril Fatface', serif;
+}
+
+.destination-content p {
+    width: 700px;
+    font-family: 'Mukta Mahee', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    color: #555555;
+    padding-top: 10px;
+    line-height: 1.3;
+}
+
+/* destination cards */
+
+.destination-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.top-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.top-card:hover {
+    transform: translateY(-5px);
+}
+
+.top-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.destination-title {
+    padding: 10px;
+}
+
+.destination-title h1 {
+    font-size: 32px;
+    font-family: 'Abril Fatface', serif;
+    margin: 10px 0 5px;
+}
+
+.rating-stars img {
+    width: 16px;
+    height: 16px;
+}
+
+/* footer styling */
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 60px 40px 20px;
+    font-family: 'Mukta Mahee', sans-serif;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+
+.footer-col h3 {
+    font-family: 'Abril Fatface', serif;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+}
+
+.footer-col p {
+    color: #ccc;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #aaa;
+    margin-top: 10px;
+}
+
+.subscribe-form input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 10px;
+    flex: 1;
+}
+
+.subscribe-form button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    color: #999;
+    font-size: 14px;
+}
+
+.footer-bottom span {
+    color: #e74c3c;
+}
+
+.social-icons i {
+    color: #ccc;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.social-icons i:hover {
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -401,6 +734,14 @@ header {
         font-size: 20px;
     }
 
+    /* experience */
+    .experience-card {
+        width: fit-content;
+        position: relative;
+        left: -20px;
+
+    }
+
     /* internation tour responsivenes  */
     .tour-content h1 {
         font-size: 40px;
@@ -414,5 +755,100 @@ header {
         padding-top: 40px;
         font-size: 16px;
 
+    }
+
+    /* top destination */
+    .destination-content p {
+        width: 350px;
+    }
+
+    /* blog styling */
+    .blog-content p {
+        width: 350px;
+    }
+
+    .card-group {
+        width: 350px;
+        grid-template-columns: 1fr;
+        /* Stack cards vertically */
+        gap: 20px;
+        position: relative;
+        left: -60px;
+    }
+
+    .card {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    /* footer responsive  */
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+
+    .subscribe-form {
+        flex-direction: row;
+    }
+
+    .subscribe-form input {
+        font-size: 14px;
+    }
+
+    .subscribe-form button {
+        font-size: 16px;
+    }
+
+
+}
+
+/* customer section responsivens */
+/* Tablets (768px to 991px) */
+@media (max-width: 991px) {
+    .customer-title {
+        font-size: 48px;
+        line-height: 50px;
+    }
+
+    .customers {
+        padding: 30px 40px;
+    }
+
+    .customer-card {
+        width: 100%;
+    }
+}
+
+/* Mobile Devices (up to 780px) */
+@media (max-width: 780px) {
+    .customer-title {
+        font-size: 36px;
+        line-height: 45px;
+    }
+
+    .customers {
+        padding: 20px;
+    }
+
+    .customers-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .customer-card {
+        width: 100%;
+    }
+
+    .customer-card p {
+        font-size: 16px;
+    }
+
+    .customer-name {
+        font-size: 16px;
     }
 }

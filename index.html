@@ -12,7 +12,7 @@
     />
     <!-- Mukta Mahee font -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Mukta+Mahee&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Mukta+Mahee:wght@200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
@@ -29,7 +29,8 @@
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
-
+    <!-- aos animation library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Link to your external CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -37,12 +38,23 @@
     <header>
       <div class="logo">Hepta</div>
       <div class="hamburger-icon">
-        <i class="fas fa-bars"></i>
+        <i class="fas fa-bars open-menu"></i>
+        <i class="fas fa-times close-menu"></i>
       </div>
+      <!-- navbar menu -->
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
     </header>
+
     <!-- hero section -->
     <section class="hero">
-      <div class="hero-content">
+      <div class="hero-content" data-aos="zoom-in-up" data-aos-delay="300">
         <h1>Travel & Tours</h1>
         <p>A free template by <span>Colorlib</span>. Download and share!</p>
         <a href="#" class="hero-btn">Visit Colorlib</a>
@@ -52,13 +64,13 @@
     <!-- hero 1 section -->
     <section class="intro-section">
       <div class="intro-container">
-        <div class="intro-image">
+        <div class="intro-image" data-aos="fade-up">
           <img
             src="./assets/hero_left.jpg.webp"
             alt="Traveler watching mountain view"
           />
         </div>
-        <div class="intro-content">
+        <div class="intro-content" data-aos="fade-up">
           <h2>Welcome To Our Website</h2>
           <p>
             Far far away, behind the word mountains, far from the countries
@@ -79,7 +91,7 @@
 
     <!-- experince section  -->
     <section class="experience-section">
-      <div class="experience-header">
+      <div class="experience-header" data-aos="fade-up">
         <h2>Experience Once In Your Life Time</h2>
         <p>
           Far far away, behind the word mountains, far from the countries
@@ -89,7 +101,7 @@
         </p>
       </div>
 
-      <div class="experience-grid">
+      <div class="experience-grid" data-aos="fade-up">
         <div class="experience-card">
           <img src="/assets/001-breakfast.svg" alt="Good Foods" />
           <h3>Good Foods</h3>
@@ -147,7 +159,7 @@
     <!-- international tour section -->
 
     <section class="International-Tour">
-      <div class="tour-management">
+      <div class="tour-management" data-aos="fade-up">
         <div class="tour-content">
           <h1>
             International Tour <br />
@@ -161,7 +173,11 @@
           </p>
         </div>
         <!-- bootstrap coursel section -->
-        <div id="carouselExampleIndicators" class="carousel slide">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-aos="fade-up"
+        >
           <div class="carousel-indicators">
             <button
               type="button"
@@ -231,7 +247,7 @@
 
     <!-- Blog section -->
     <section class="blog">
-      <div class="main-blog">
+      <div class="main-blog" data-aos="fade-up">
         <div class="blog-content">
           <h1>Recent Blog Post</h1>
           <p>
@@ -242,7 +258,12 @@
           </p>
         </div>
         <!-- cards portion -->
-        <div class="card-group">
+        <div
+          class="card-group"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
           <div class="card">
             <img src="./assets/card-1" alt="Card image" />
             <div class="card-body">
@@ -281,6 +302,200 @@
         </div>
       </div>
     </section>
+    <!-- happy customer section -->
+    <section class="customers">
+      <div class="main-customers" data-aos="fade-up">
+        <h1 class="customer-title">Happy Customers</h1>
+      </div>
+      <!-- cards section -->
+
+      <div class="customers-cards" data-aos="fade-right">
+        <!-- card 1 -->
+        <div class="customer-card">
+          <img src="./assets/person_1.jpg.webp" alt="person_1" />
+          <div class="customer-content">
+            <p>
+              “Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia, there live the blind texts. Separated
+              they live in Bookmarksgrove right at the coast of the Semantics, a
+              large language ocean.”
+            </p>
+            <p class="customer-name">— Clare Gupta</p>
+          </div>
+        </div>
+
+        <!-- card 2 -->
+        <div class="customer-card">
+          <img src="./assets/person_2.jpg.webp" alt="person_2" />
+          <div class="customer-content">
+            <p>
+              “Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia, there live the blind texts. Separated
+              they live in Bookmarksgrove right at the coast of the Semantics, a
+              large language ocean.”
+            </p>
+            <p class="customer-name">— Rogie Slater</p>
+          </div>
+        </div>
+
+        <!-- card 3 -->
+        <div class="customer-card">
+          <img src="./assets/person_3.jpg.webp" alt="person_3" />
+          <div class="customer-content">
+            <p>
+              “Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia, there live the blind texts. Separated
+              they live in Bookmarksgrove right at the coast of the Semantics, a
+              large language ocean.”
+            </p>
+            <p class="customer-name">— John Doe</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- top destination section -->
+    <section class="top-destination">
+      <div class="destination-content" data-aos="fade-up">
+        <h1 class="top-title">Top Destination</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. In dolor,
+          iusto doloremque quo odio repudiandae sunt eveniet? Enim facilis
+          laborum voluptate id porro, culpa maiores quis, blanditiis laboriosam
+          alias. Sed.
+        </p>
+      </div>
+
+      <!-- card section  -->
+      <div class="destination-cards" data-aos="fade-right">
+        <!-- Card 1 -->
+        <div class="top-card">
+          <img src="./assets/card-1" alt="Food & Wines" />
+          <div class="destination-title">
+            <h1>Food & Wines</h1>
+            <div class="rating-stars">
+              <img src="./assets/icons8-star-16.png" alt="star" />
+              <img src="./assets/icons8-star-16.png" alt="star" />
+              <img src="./assets/icons8-star-16.png" alt="star" />
+              <img src="./assets/icons8-star-16.png" alt="star" />
+              <img src="./assets/icons8-star-16.png" alt="star" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="top-card">
+          <img src="./assets/card-2" alt="Food & Wines" />
+          <div class="destination-title">
+            <h1>Food & Wines</h1>
+            <div class="rating-stars">
+              <img src="./assets/icons8-star-16.png" alt="star" />
+              <img src="./assets/icons8-star-16.png" alt="star" />
+              <img src="./assets/icons8-star-16.png" alt="star" />
+              <img src="./assets/icons8-star-16.png" alt="star" />
+              <img src="./assets/icons8-star-16.png" alt="star" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="top-card">
+          <img src="./assets/card-3.jpg.webp" alt="Food & Wines" />
+          <div class="destination-title">
+            <h1>Food & Wines</h1>
+            <div class="rating-stars">
+              <img src="./assets/icons8-star-16.png" alt="star" />
+              <img src="./assets/icons8-star-16.png" alt="star" />
+              <img src="./assets/icons8-star-16.png" alt="star" />
+              <img src="./assets/icons8-star-16.png" alt="star" />
+              <img src="./assets/icons8-star-16.png" alt="star" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="top-card">
+          <img src="./assets/img_5.jpg.webp" alt="Food & Wines" />
+          <div class="destination-title">
+            <h1>Food & Wines</h1>
+            <div class="rating-stars">
+              <img src="./assets/icons8-star-16.png" alt="star" />
+              <img src="./assets/icons8-star-16.png" alt="star" />
+              <img src="./assets/icons8-star-16.png" alt="star" />
+              <img src="./assets/icons8-star-16.png" alt="star" />
+              <img src="./assets/icons8-star-16.png" alt="star" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class="footer">
+      <div class="footer-container" data-aos="fade-up">
+        <div class="footer-col">
+          <h3>Quick Link</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Rooms</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">Our Location</a></li>
+            <li><a href="#">The Hosts</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Restaurant</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contact Info</h3>
+          <p>
+            <strong>Address:</strong><br />
+            98 West 21th Street, Suite 721<br />
+            New York NY 10016
+          </p>
+          <p>
+            <strong>Phone:</strong><br />
+            (+1) 435 3533
+          </p>
+          <p>
+            <strong>Email:</strong><br />
+            info@yourdomain.com
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Subscribe</h3>
+          <p>Sign up for our newsletter</p>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Your email..." />
+            <button type="submit">✈</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          Copyright © 2025 All rights reserved | This template is made with
+          <span>♥</span> by Colorlib
+        </p>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-linkedin-in"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+      </div>
+    </footer>
+
     <!-- javascript bootstrap cdn link -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
@@ -289,5 +504,9 @@
     ></script>
 
     <script src="./app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
